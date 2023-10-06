@@ -1,4 +1,13 @@
 const express = require('express');
+const mysql = require('mysql2');
+
+const connection = mysql.createConnection({
+	host: 'localhost',
+	user: 'root',
+	password: '',
+	database: 'memo_app'
+});
+
 const app = express();
 const port = 3001;
 
@@ -7,7 +16,16 @@ app.get('/', (req, res) => {
   });
 
 app.get('/api', (req, res) => {
-	res.json({message: "hello world"});
+	connection.query(
+		'SELECT * FROM users',
+		function(err, results, fields) {
+			if(err) {
+				console.log('接続エラー');
+				throw err;
+			}
+			res.json({message: results[0].name})
+		}
+	)
 });
 
 
