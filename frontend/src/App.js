@@ -1,5 +1,6 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import Header from './modules/Header.jsx';
 
 function App() {
   const [message, setMessage] = useState('');
@@ -11,10 +12,9 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <h1>フロントエンド</h1>
-      <p>{message}</p>
-    </div>
+    <React.StrictMode>
+      <Header/>
+    </React.StrictMode>
   );
 }
 
