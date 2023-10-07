@@ -7,14 +7,12 @@ function List() {
 		<>
 			<div className="List common_frame">
 			<ul className="item">
-                <li>Day</li>
-                <li>Title</li>
-                <li>Content</li>
+                <li>メモ</li>
             </ul>
             <ul className="result">
-                <li>12/1</li>
-                <li>欲しいモノリスト</li>
-                <li>きつね、たぬき、ねこ、スイカ</li>
+                <li>スーパー行く</li>
+                <li></li>					
+                <li></li>
             </ul>
 			</div>
 		</>

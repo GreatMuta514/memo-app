@@ -5,9 +5,9 @@ function Form(){
 	return(
 		<>
 			<div className='Form common_frame'>
-				<p>ユーザー名</p>
+				<p>メモ</p>
 				<input type="text" name=""></input>
-				<input type="submit" name="" value="検索する" className="submit" />
+				<input type="submit" name="" value="保存する" className="submit" />
 			</div>
 		</>
 	)

@@ -8,10 +8,7 @@ function Header(){
 			<header className="Header">
 				<ul>
 					<li className="H_logo">
-						<p>Books</p>
-					</li>
-					<li>
-						aiueo
+						<p>メモアプリ</p>
 					</li>
 				</ul>
 
