@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import Header from './modules/Header.jsx';
 import Form from './modules/Form.jsx';
+import List from './modules/List.jsx';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <React.StrictMode>
       <Header/>
       <Form/>
+      <List/>
     </React.StrictMode>
   );
 }
