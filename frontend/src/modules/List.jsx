@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 import '../css/common.css';
 import '../css/List.css';
 
-function List() {
+function List({memo}) {
 	return(
 		<>
 			<div className="List common_frame">
@@ -10,7 +10,7 @@ function List() {
                 <li>メモ</li>
             </ul>
             <ul className="result">
-                <li>スーパー行く</li>
+                <li>{memo}</li>
                 <li></li>					
                 <li></li>
             </ul>

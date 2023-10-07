@@ -17,17 +17,16 @@ app.get('/', (req, res) => {
 
 app.get('/api', (req, res) => {
 	connection.query(
-		'SELECT * FROM users',
+		'SELECT * FROM memos',
 		function(err, results, fields) {
 			if(err) {
 				console.log('接続エラー');
 				throw err;
 			}
-			res.json({message: results[0].name})
+			res.json({memo: results[0].content})
 		}
 	)
 });
-
 
 app.listen(port, () => {
 	console.log(`listening on *:${port}`);

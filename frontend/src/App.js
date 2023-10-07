@@ -6,19 +6,19 @@ import List from './modules/List.jsx';
 
 
 function App() {
-  const [message, setMessage] = useState('');
+  const [memo, setMemo] = useState('');
 
   useEffect(() => {
     fetch('/api')
     .then((res) => res.json())
-    .then((data) => setMessage(data.message));
+    .then((data) => setMemo(data.memo));
   }, [])
 
   return (
     <React.StrictMode>
       <Header/>
       <Form/>
-      <List/>
+      <List memo={memo}/>
     </React.StrictMode>
   );
 }
