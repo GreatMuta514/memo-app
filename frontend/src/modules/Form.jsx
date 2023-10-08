@@ -1,5 +1,4 @@
 import React from 'react';
-import Axios from "axios";
 import '../css/common.css';
 
 
@@ -11,18 +10,20 @@ function Form(){
 	// }
 
 	const postMemo = () => {
-		Axios.post("/api/insert/memo", {
-			content: inputRef.current.value
-		}).catch((err) => {
-			console.log(err)
+		fetch('/api/insert/memo',{
+			method: "POST",
+			headers:{'Content-Type': 'application/json'},
+			body: JSON.stringify({ // 引数に与えた文字列をJsonに変換
+				"content": inputRef.current.value
+			})
 		})
-	}
+	};
 
 	return(
 		<>
 			<div className='Form common_frame'>
 				<p>メモ</p>
-				<input ref={inputRef} type="text" name=""></input>
+				<input ref={inputRef} type="text" name="content"></input>
 				<input type="submit" name="" value="保存する" className="submit" onClick={postMemo} />
 			</div>
 		</>
