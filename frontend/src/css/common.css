@@ -1,184 +1,269 @@
 /*setting*/
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,
-blockquote,pre,abbr,address,cite,code,del,dfn,em,img,
-ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,
-ol,ul,li,fieldset,form,label,legend,table,caption,
-tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,
-figcaption,figure,footer,header,hgroup,menu,nav,section,
-summary,time,mark,audio,video {
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    vertical-align: baseline;
-    border: 0;
-    outline: 0;
-    background: transparent;
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  border: 0;
+  outline: 0;
+  background: transparent;
 }
 body {
-    line-height: 1;
+  line-height: 1;
 }
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
-    display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 nav ul {
-    list-style: none;
+  list-style: none;
 }
 blockquote,
 q {
-    quotes: none;
+  quotes: none;
 }
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
-    content: none;
+  content: "";
+  content: none;
 }
 a {
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    vertical-align: baseline;
-    background: transparent;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background: transparent;
 }
 ins {
-    text-decoration: none;
-    color: #000;
-    background-color: #ff9;
+  text-decoration: none;
+  color: #000;
+  background-color: #ff9;
 }
 mark {
-    font-weight: bold;
-    font-style: italic;
-    color: #000;
-    background-color: #ff9;
+  font-weight: bold;
+  font-style: italic;
+  color: #000;
+  background-color: #ff9;
 }
 del {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 abbr[title],
 dfn[title] {
-    cursor: help;
-    border-bottom: 1px dotted;
+  cursor: help;
+  border-bottom: 1px dotted;
 }
 table {
-    border-spacing: 0;
-    border-collapse: collapse;
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 hr {
-    display: block;
-    height: 1px;
-    margin: 1em 0;
-    padding: 0;
-    border: 0;
-    border-top: 1px solid #ccc;
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #ccc;
 }
-label{
-	font-family:"Poppins";
-	font-size:18px;
+label {
+  font-family: "Poppins";
+  font-size: 18px;
 }
-input{
-	font-family:"Poppins";
-	font-size:15px;
-	color:#171717;
+input {
+  font-family: "Poppins";
+  font-size: 15px;
+  color: #171717;
 }
-input{
-	width:100%;
-	height:40px;
-	border-radius:3px;
-	border:1px solid rgba(0, 0, 0, 0.1);
-	background:#FCFCFC;
-	margin:5px 0 0 0 ;
-	padding:0 18px;
-	box-sizing: border-box;
+input {
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fcfcfc;
+  margin: 5px 0 0 0;
+  padding: 0 18px;
+  box-sizing: border-box;
 }
-select{
-	width:100%;
-	height:40px;
-	border-radius:3px;
-	border:1px solid rgba(0, 0, 0, 0.1);
-	background:#FCFCFC;
-	display:inline-block;
-    margin:5px 0 0 0 ;
-	padding:0 18px;
-	box-sizing: border-box;
-	color:#161616;
-	font-size:15px;
-	appearance: none;
+select {
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fcfcfc;
+  display: inline-block;
+  margin: 5px 0 0 0;
+  padding: 0 18px;
+  box-sizing: border-box;
+  color: #161616;
+  font-size: 15px;
+  appearance: none;
 }
-select::-ms-expand{
-	display:none;
+select::-ms-expand {
+  display: none;
 }
-option{
-	font-size:14px;
-	font-family:"Poppins";
+option {
+  font-size: 14px;
+  font-family: "Poppins";
 }
-textarea{
-	width:100%;
-	height:200px;
-	border-radius:3px;
-	border:1px solid rgba(0, 0, 0, 0.1);
-	background:#FCFCFC;
-	margin:5px 0 0 0 ;
-	padding:15px;
-	box-sizing: border-box;
-	color:#161616;
-	font-family:"Poppins";
-    font-size:15px;
+textarea {
+  width: 100%;
+  height: 200px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fcfcfc;
+  margin: 5px 0 0 0;
+  padding: 15px;
+  box-sizing: border-box;
+  color: #161616;
+  font-family: "Poppins";
+  font-size: 15px;
 }
 
 /*setting more*/
 body {
-    font-family:"Noto Sans JP", fot-tsukubrdgothic-std, fot-tsukuardgothic-std, toppan-bunkyu-midashi-go-std, "Poppins","Yu Mincho", YuMincho, "YuMincho", "Yu Gothic", "YuGothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Robot", serif;
-    width:100%;
-    background:#F2F2F2;
+  font-family: "Noto Sans JP", fot-tsukubrdgothic-std, fot-tsukuardgothic-std,
+    toppan-bunkyu-midashi-go-std, "Poppins", "Yu Mincho", YuMincho, "YuMincho",
+    "Yu Gothic", "YuGothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Robot", serif;
+  width: 100%;
+  background: #f2f2f2;
 
-    margin:0px;
-	overflow-x: hidden;
+  margin: 0px;
+  overflow-x: hidden;
 }
-ul{
-    padding-left:0px;
-    list-style-type: none;
-    margin:0;
+ul {
+  padding-left: 0px;
+  list-style-type: none;
+  margin: 0;
 }
-p,a,h1,h2,h3,h4,div{
-	font-size:16px;
-	color:#000;
-	text-decoration: none;
-    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", "Yu Mincho", YuMincho, "YuMincho", "Yu Gothic", "YuGothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Robot", serif;
-    
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+div {
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP",
+    "Yu Mincho", YuMincho, "YuMincho", "Yu Gothic", "YuGothic", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Robot", serif;
 }
-p,a,li{
-    letter-spacing: 0.5px;
-	font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", "Yu Mincho", YuMincho, "YuMincho", "Yu Gothic", "YuGothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Robot", serif;
+p,
+a,
+li {
+  letter-spacing: 0.5px;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP",
+    "Yu Mincho", YuMincho, "YuMincho", "Yu Gothic", "YuGothic", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Robot", serif;
 }
 
 /*scrollbar*/
-::-webkit-scrollbar{
-    width: 15px;
+::-webkit-scrollbar {
+  width: 15px;
 }
-::-webkit-scrollbar-track{
-    background: #fff;
-    border: none;
-    border-radius: 10px;
-    box-shadow: inset 0 0 0px #333333;
+::-webkit-scrollbar-track {
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0px #333333;
 }
-::-webkit-scrollbar-thumb{
-    background: #efefef;
-    border-radius: 10px;
-    box-shadow: none;
+::-webkit-scrollbar-thumb {
+  background: #efefef;
+  border-radius: 10px;
+  box-shadow: none;
 }
 
-.common_frame{
-    width:100%;
-    max-width:900px;
-    margin:30px auto;
-    padding:30px;
-    box-sizing: border-box;
+.common_frame {
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 30px;
+  box-sizing: border-box;
 }
-.common_frame form{
-    margin:10px 0;
+.common_frame form {
+  margin: 10px 0;
 }
-.common_frame input{
-    margin:10px 0;
+.common_frame input {
+  margin: 10px 0;
 }

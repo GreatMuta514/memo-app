@@ -13,14 +13,14 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
 
-app.get('/', (req, res) => {
+app.get('/', (_, res) => {
 	res.send('Hello World!');
   });
 
-app.get('/api', (req, res) => {
+app.get('/api', (_, res) => {
 	connection.query(
 		'SELECT * FROM memos',
-		function(err, memos, fields) {
+		function(err, memos) {
 			if(err) {
 				console.log('接続エラー');
 				throw err;

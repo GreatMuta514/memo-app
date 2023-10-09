@@ -1,7 +1,7 @@
-.List>.result>li{
-    background:#fff;
+.List > .result > li {
+  background: #fff;
 }
-.List>ul>li:nth-child(1){
-	padding: 20px;
-    width:100%;
+.List > ul > li:nth-child(1) {
+  padding: 20px;
+  width: 100%;
 }
