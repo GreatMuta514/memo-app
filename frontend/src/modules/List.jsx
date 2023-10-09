@@ -1,8 +1,7 @@
-import React, { memo } from 'react';
 import '../css/common.css';
 import '../css/List.css';
 
-function List({memo}) {
+function List({memos}) {
 	return(
 		<>
 			<div className="List common_frame">
@@ -10,9 +9,9 @@ function List({memo}) {
                 <li>メモ</li>
             </ul>
             <ul className="result">
-                <li>{memo}</li>
-                <li></li>					
-                <li></li>
+				{memos.map((memo) =>
+					 <li>{memo.content}</li>
+				)}
             </ul>
 			</div>
 		</>

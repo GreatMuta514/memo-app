@@ -20,12 +20,12 @@ app.get('/', (req, res) => {
 app.get('/api', (req, res) => {
 	connection.query(
 		'SELECT * FROM memos',
-		function(err, results, fields) {
+		function(err, memos, fields) {
 			if(err) {
 				console.log('接続エラー');
 				throw err;
 			}
-			res.json({memo: results[0].content})
+			res.json(memos)
 		}
 	)
 });

@@ -6,12 +6,12 @@ import List from './modules/List.jsx';
 
 
 function App() {
-  const [memo, setMemo] = useState('');
+  const [memos, setMemos] = useState([]);
 
   useEffect(() => {
     fetch('/api')
     .then((res) => res.json())
-    .then((data) => setMemo(data.memo));
+    .then((data) => setMemos(data));
   }, [])
 
 
@@ -19,7 +19,7 @@ function App() {
     <React.StrictMode>
       <Header/>
       <Form/>
-      <List memo={memo}/>
+      <List memos={memos}/>
     </React.StrictMode>
   );
 }
