@@ -22,6 +22,10 @@ const express = require('express');
 const app = express()
 const port = 3000;
 
+app.listen(port, () => {
+	console.log(`listening on *:${port}`);
+})
+
 app.get('/', (_, res) => {
 	res.send('Hello World!');
 });
@@ -109,3 +113,25 @@ JSON
 
 ## まとめ
 APIでJSONが使われる理由は、「様々なプログラミング言語で扱いやすい」という特徴があるから。
+
+# 3, HTTPリクエスト・HTTPレスポンス
+## HTTPリクエスト
+### HTTPリクエストヘッダ
+![Alt text](frontend/public/%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%83%98%E3%83%83%E3%83%80.png)
+
+### HTTPリクエストボディ
+確認方法不明。
+
+## HTTPレスポンス
+### HTTPレスポンスヘッダ
+![Alt text](frontend/public/%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B9%E3%83%98%E3%83%83%E3%83%80.png)
+
+### HTTPレスポンスボディ
+![Alt text](frontend/public/%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B9%E3%83%9C%E3%83%87%E3%82%A3.png)
+
+## ヘッダとボディの違い
+### リクエストヘッダーとボディの違い
+- POSTリクエストで送信するデータはボディーに入る
+- ヘッダーはキーバリュー形式。ボディはJSON・XMLなどのデータ形式をで送信できる。
+    - ボディで使えるデータ形式(https://apidog.com/jp/blog/http-request-body/#http%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%83%9C%E3%83%87%E3%82%A3%E3%81%AE%E5%BD%A2%E5%BC%8F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+- ヘッダーはほぼ全部のリクエストで、ボディは必要な時のみに使用される。
