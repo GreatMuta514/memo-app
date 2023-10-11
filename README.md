@@ -49,12 +49,15 @@ Expressを使うとNodejsで簡単にWebアプリケーションを開発でき�
 ## JSON
 
 データ記述方式の一種。
-
 対立関係にあるもの：XML、CSV
+
+## JSONとjavascriptオブジェクトの違い
+- JSONとjavascriptオブジェクトは異なるデータ形式
+- javascriptでJSONを扱うことはできないので、デシリアライズを行う必要がある。
 
 ### JSON**.stringify()**
 
-javascriptオブジェクトをjson文字列に変換する
+javascriptオブジェクトをjson文字列に変換する（シリアライズ）
 
 ```jsx
 console.log(JSON.stringify({ x: 5, y: 6 }));
@@ -63,7 +66,7 @@ console.log(JSON.stringify({ x: 5, y: 6 }));
 
 ### response.json()
 
-json文字列をjavascriptオブジェクトに変換する
+json文字列をjavascriptオブジェクトに変換する（デシリアライズ）
 
 ```jsx
 .then((response) => response.json())
@@ -103,3 +106,6 @@ JSON
 ```
 - プログラミング言語の種類に依存せず、多くのプログラミング言語で簡単に扱える。
 - 特にjavascriptと親和性がある。（JSONはJavaScript Object Notationの略）
+
+## まとめ
+APIでJSONが使われる理由は、「様々なプログラミング言語で扱いやすい」という特徴があるから。
