@@ -167,7 +167,6 @@ const postMemo = () => {
 app.post('/api/insert/memo', (req, res) => {
 	const content = req.body.content;
 	const sqlInsert = `INSERT INTO memos (content) VALUES ("${content}")`;
-	console.log(sqlInsert);
 	connection.query(sqlInsert, (err, result) => {
 		console.log(err);
 		console.log(result);
