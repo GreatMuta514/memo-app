@@ -1,10 +1,10 @@
 const { Pool } = require("pg");
 const pool = new Pool({
-	host: 'localhost',
-    database: 'memo_app_db',
-    port: 5432,
-    user: 'greatmuta',
-    password: '',
+	host: process.env.DATABASE_HOST,
+    database: process.env.DATABASE,
+    port: process.env.DATABASE_PORT,
+    user: process.env.DATABASE_USER,
+    password: process.env.password,
 });
 
 module.exports = pool;
