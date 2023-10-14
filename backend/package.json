@@ -6,6 +6,7 @@
   "dependencies": {
     "buffer-writer": "^2.0.0",
     "cors": "^2.8.5",
+    "express": "^4.18.2",
     "object-assign": "^4.1.1",
     "packet-reader": "^1.0.0",
     "pg": "^8.11.3",
