@@ -1,11 +1,5 @@
 const express = require('express');
-const mysql = require('mysql2');
-const connection = mysql.createConnection({
-	host: 'localhost',
-	user: 'root',
-	password: '',
-	database: 'memo_app'
-});
+const pool = require('./pool');
 const port = 3001;
 
 const app = express()
@@ -18,23 +12,22 @@ app.get('/', (_, res) => {
   });
 
 app.get('/api', (_, res) => {
-	connection.query(
+	pool.query(
 		'SELECT * FROM memos',
 		function(err, memos) {
 			if(err) {
 				console.log('接続エラー');
 				throw err;
 			}
-			res.json(memos)
+			res.json(memos.rows)
 		}
 	)
 });
 
 app.post('/api/insert/memo', (req, res) => {
 	const content = req.body.content;
-	const sqlInsert = `INSERT INTO memos (content) VALUES ("${content}")`;
-	console.log(sqlInsert);
-	connection.query(sqlInsert, (err, result) => {
+	const sqlInsert = `INSERT INTO memos (content) VALUES ('${content}')`;
+	pool.query(sqlInsert, (err, result) => {
 		console.log(err);
 		console.log(result);
 	});
