@@ -3,5 +3,5 @@
 set -o errexit
 
 npm install
-
-echo "$DATABASE_USER"
+echo "ログインします"
+psql -U $DATABASE_USER -d $DATABASE
