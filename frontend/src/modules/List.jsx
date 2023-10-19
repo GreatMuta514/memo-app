@@ -3,16 +3,16 @@ import "../css/List.css";
 
 function List({ memos }) {
   return (
-      <div className="List common_frame">
-        <ul className="item">
-          <li>メモ</li>
-        </ul>
-        <ul className="result">
-          {memos.map((memo, index) => (
-            <li key={index}>{memo.content}</li>
-          ))}
-        </ul>
-      </div>
+    <div className="List common_frame">
+      <ul className="item">
+        <li>メモ</li>
+      </ul>
+      <ul className="result">
+        {memos.map((memo, index) => (
+          <li key={index}>{memo.content}</li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

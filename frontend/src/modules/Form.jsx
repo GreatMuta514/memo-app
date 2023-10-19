@@ -3,17 +3,12 @@ import "../css/common.css";
 
 function Form() {
   const inputRef = React.createRef();
-  // const handleSubmit = event => {
-  //    event.preventDefault();
-  //    console.log(inputRef.current.value);
-  // }
 
   const postMemo = () => {
     fetch("http://localhost:3001/api/insert/memo", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        // 引数に与えた文字列をJsonに変換
         content: inputRef.current.value,
       }),
     });
