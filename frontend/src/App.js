@@ -8,7 +8,7 @@ function App() {
   const [memos, setMemos] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/api")
+    fetch(process.env.REACT_APP_API_URI + "/api", { mode: "cors" })
       .then((res) => res.json())
       .then((data) => setMemos(data));
   }, []);
