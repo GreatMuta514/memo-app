@@ -9,7 +9,7 @@ function Form() {
   // }
 
   const postMemo = () => {
-    fetch("/api/insert/memo", {
+    fetch("http://localhost:3001/api/insert/memo", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

@@ -8,7 +8,7 @@ function App() {
   const [memos, setMemos] = useState([]);
 
   useEffect(() => {
-    fetch("/api")
+    fetch("http://localhost:3001/api")
       .then((res) => res.json())
       .then((data) => setMemos(data));
   }, []);

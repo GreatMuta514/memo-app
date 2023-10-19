@@ -8,8 +8,8 @@ function List({ memos }) {
           <li>メモ</li>
         </ul>
         <ul className="result">
-          {memos.map((memo) => (
-            <li>{memo.content}</li>
+          {memos.map((memo, index) => (
+            <li key={index}>{memo.content}</li>
           ))}
         </ul>
       </div>
