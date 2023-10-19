@@ -3,7 +3,7 @@ const pool = require("./pool");
 const port = 3001;
 const app = express();
 const allowCrossDomain = function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.header("Access-Control-Allow-Origin", process.env.API_URI);
   res.header("Access-Control-Allow-Methods", "");
   res.header("Access-Control-Allow-Headers", "Content-Type");
   if ("OPTIONS" === req.method) {
